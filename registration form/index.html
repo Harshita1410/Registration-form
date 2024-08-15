@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="box">
+            <h1>STUDENT REGISTRATION FORM </h1>
+            <p><b>Instructions to fill this form</b></p>
+            <ol>
+                <li>The information given by the students must be valid.</li>
+                <li>All fields are mandatory.</li>
+                <li>Submit this form before your classes begins.</li>
+                <li>If any questions then clarify with your respective class teachers.</li>
+            </ol>
+            <hr>
+            <form action="" method="post">
+
+                <h5>Student Details</h5>
+
+                <label for="Name">Name of the Student</label>
+                <input type="text" name="Name" placeholder="Enter your full Name.." required>
+                <br>
+                <label for="DOB">Date Of Birth</label>
+                <input type="date" name="DOB" required>
+                <br>
+
+                <label for="Contact">Contact</label>
+                <input type="text" id="Contact" name="Contact" maxlength="10" pattern="\d{10}"
+                    title="Contact number must be exactly 10 digits." required>
+                <br>
+                <label class="gender">Gender</label>
+
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="male">Female</label>
+                <br>
+                <label for="course">Course</label>
+                <input type="text" name="course" required>
+
+                <br>
+                <label for="Address">Residential Address</label>
+                <textarea name="comment" rows="4" cols="50" required>
+               Enter your address here...
+               </textarea>
+                <hr>
+                <h5>Father's Information</h5>
+                <label for="Name">Father's Name</label>
+                <input type="text" name="Name" placeholder="Enter full Name.." required>
+                <br>
+                <label for="DOB">Date Of Birth</label>
+                <input type="date" name="DOB" required>
+                <br>
+
+                <label for="Contact">Contact</label>
+                <input type="number" name="Contact" required>
+                <br>
+                <label for="Designation">Designation</label>
+                <input type="text" name="Designation" required>
+                <br>
+                <label for="OfficeAddress">Office Address</label>
+
+                <textarea name="OfficeAddress" rows="4" cols="50" required>
+                  Enter office address here...
+                </textarea>
+
+            </form>
+
+            <input type="checkbox" id="agree" name="agree" value="yes">
+            I agree all my details are valid.
+            <br>
+
+            <button onclick="SUBMIT()">Submit</button>
+        </div>
+
+
+    </div>
+
+
+    <script>
+        function SUBMIT() {
+            var form = document.querySelector('form');
+            var requiredFields = form.querySelectorAll('[required]');
+            var checkbox = document.getElementById('agree');
+            var isValid = true;
+
+            // Check if all required fields are filled
+            requiredFields.forEach(function (field) {
+                if (field.value === '') {
+                    isValid = false;
+                    alert('Please fill in all required fields');
+                    return;
+                }
+            });
+
+            // Check if checkbox is selected
+            if (!checkbox.checked) {
+                isValid = false;
+                alert('Please agree to the terms and conditions');
+                return;
+            }
+
+            if (isValid) {
+                alert('Form submitted');
+                // You can also submit the form here using form.submit()
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

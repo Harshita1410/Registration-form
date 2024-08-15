@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+
+
+}
+
+.container {
+    height: 2000px;
+    display: flex;
+    justify-content: center;
+}
+
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 25px;
+
+}
+
+p {
+    text-align: left;
+    font-size: 20px;
+    margin-bottom: 4px;
+    font-style: italic;
+
+
+}
+
+ol {
+    font-style: italic;
+    line-height: 23px;
+    margin-bottom: 15px;
+    margin-left: 20px;
+}
+
+hr {
+    margin-bottom: 20px;
+}
+
+h5 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+
+
+
+.box {
+    width: 60%;
+    /* adjust the width to your liking */
+    height: 1300px;
+    margin: 40px auto;
+    /* center the box */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: azure;
+
+}
+
+.box label {
+    display: inline-block;
+    width: 150px;
+    /* adjust the width to your liking */
+    margin-bottom: 10px;
+    font-weight: bold;
+    vertical-align: top;
+}
+
+.box input[type="text"],
+.box input[type="number"],
+.box input[type="date"],
+.box select,
+.box textarea {
+    width: 280px;
+    /* adjust the width to your liking */
+    height: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+
+.box textarea {
+    height: 100px;
+    width: 400px;
+    margin-bottom: 20px;
+    vertical-align: top;
+}
+
+.gender {
+    margin-right: 20px;
+}
+
+
+
+input[type="radio"] {
+    margin: 0 5px;
+}
+
+
+
+button {
+    padding: 15px;
+    width: 220px;
+    border-radius: 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin: 50px auto;
+}
+
+/* Media queries for mobile phones */
+
+@media only screen and (max-width: 768px) {
+    .container {
+        height: auto;
+        padding: 20px;
+    }
+
+    .box {
+        width: 90%;
+        height: 1700px;
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    .box label {
+        width: 100px;
+    }
+
+    .box input[type="text"],
+    .box input[type="number"],
+    .box input[type="date"],
+    .box select,
+    .box textarea {
+        width: 70%;
+        height: 30px;
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    .box textarea {
+        height: 150px;
+        width: 70%;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        margin: 20px auto;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .box {
+        padding: 10px;
+    }
+
+    .box label {
+        width: 80px;
+    }
+
+    .box input[type="text"],
+    .box input[type="number"],
+    .box input[type="date"],
+    .box select,
+    .box textarea {
+        height: 25px;
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+
+    .box textarea {
+        height: 100px;
+    }
+
+    button {
+        padding: 5px;
+        margin: 10px auto;
+    }
+}
